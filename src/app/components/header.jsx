@@ -24,6 +24,15 @@ return <span className={className}>{displayText}</span>;
 
 
 const header = () => {
+
+    const [pathname, setPathname] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setPathname(window.location.pathname);
+    }
+  }, []);
+
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
         <motion.div 
@@ -40,7 +49,7 @@ const header = () => {
         Hi! I'm William Mark <Image src={assets.hand_icon} alt=''
         className = 'w-6'/></motion.h3>
         <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo text-black">
-        <TypingText key={window.location.pathname} text='Frontend Developer based in London.' className="text-black font-Ovo" />
+        <TypingText key={pathname} text='Frontend Developer based in London.' className="text-black font-Ovo" />
         <span className="animate-pulse text-black ml-1">|</span>
       </h1>
         <p className='max-w-2xl mx-auto font-Ovo'>
