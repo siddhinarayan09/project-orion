@@ -25,12 +25,8 @@ const About = () => {
                     max-w-2xl'>
                         {infoList.map(({icon, iconDark, title, description}, index)=>(
                             <li className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer
-                            hover:bg-pink-50 hover:-translate-y-1 duration-500 hover:shadow-black' 
+             hover:bg-pink-50 hover:-translate-y-1 hover:shadow-[4px_4px_0_#000] duration-500 transition-transform' 
                             key={index}
-                            style={{
-                                boxShadow: '5px 5px 10px rgba(1, 0, 0, 0.1)', // Adjust the shadow properties
-                
-                            }}
                             >
                                 <Image src={icon} alt={title}/>
                                 <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>

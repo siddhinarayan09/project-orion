@@ -18,12 +18,9 @@ const services = () => {
             <div className='grid lg:grid-cols-4 sm:grid-cols-4 gap-6 my-10'>
                 {serviceData.map(({icon, title, description, link}, index)=>(
                     <div key={index} 
-                    className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer
+                    className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] duration-500 transition-transform cursor-pointer
                     hover:bg-pink-50 hover:-translate-y-1 duration-500'
-                    style={{
-                        boxShadow: '5px 5px 10px rgba(1, 0, 0, 0.1)', 
-        
-                    }}>
+                    >
                         <Image src={icon} alt="" className='w-10' />
                         <h3 className='text-lg my-4 text-graay-700'>{title}</h3>
                         <p className='text-sm text-gray-600 leading-5'>
