@@ -1,10 +1,15 @@
 import { assets, infoList, toolsData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'motion/react'
 
 const About = () => {
   return (
-    <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
+    <motion.div id='about' className='w-full px-[12%] py-10 scroll-mt-20'
+    initial= {{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{duration: 1}}
+            >
         <h4 className='text-center mb-2 text-lg font-Ovo'>
             Introduction</h4>
         <h2 className='text-center text-5xl font-Ovo'>
@@ -51,7 +56,7 @@ const About = () => {
 
             </div>
 
-    </div>
+    </motion.div>
 
   )
 }
